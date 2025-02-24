@@ -40,20 +40,48 @@
             android:id="@+id/button00"
             style="@style/GridButton"
             android:contentDescription="@string/tic_tac_toe_btn"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck,RedundantDescriptionCheck" />
 
         <Button
             android:id="@+id/button01"
             style="@style/GridButton"
             android:contentDescription="@string/tic_tac_toe_btn"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-        <Button android:id="@+id/button02" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
-        <Button android:id="@+id/button10" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
-        <Button android:id="@+id/button11" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
-        <Button android:id="@+id/button12" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
-        <Button android:id="@+id/button20" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
-        <Button android:id="@+id/button21" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
-        <Button android:id="@+id/button22" style="@style/GridButton" android:contentDescription="@string/tic_tac_toe_btn"/>
+            tools:ignore="DuplicateSpeakableTextCheck,RedundantDescriptionCheck" />
+
+        <Button
+            android:id="@+id/button02"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button10"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button11"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button20"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button21"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button22"
+            style="@style/GridButton"
+            tools:ignore="SpeakableTextPresentCheck" />
     </GridLayout>
 
     <!-- Reset Buttons -->

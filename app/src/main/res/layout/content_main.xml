@@ -25,7 +25,7 @@
         android:rowCount="3">
 
         <!-- 3x3 Grid Buttons -->
-        <Button android:id="@+id/button00" style="@style/GridButton"/>
+        <Button android:id="@+id/button00" style="@style/GridButton" />
         <Button android:id="@+id/button01" style="@style/GridButton"/>
         <Button android:id="@+id/button02" style="@style/GridButton"/>
         <Button android:id="@+id/button10" style="@style/GridButton"/>

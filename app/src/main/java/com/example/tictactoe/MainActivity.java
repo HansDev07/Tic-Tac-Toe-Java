@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private Button[][] buttons = new Button[3][3];
+    private final Button[][] buttons = new Button[3][3];
     private boolean playerXTurn = true;
     private int roundCount = 0;
     private int scoreX = 0;
@@ -19,13 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         scoreBoard = findViewById(R.id.scoreBoard);
         initializeGrid();
-
         Button resetBoardButton = findViewById(R.id.resetBoardButton);
         Button resetScoreButton = findViewById(R.id.resetScoreButton);
-
         resetBoardButton.setOnClickListener(v -> resetBoard());
         resetScoreButton.setOnClickListener(v -> resetScore());
     }
@@ -43,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void onButtonClick(View view) {
         Button clickedButton = (Button) view;
-        if (!clickedButton.getText().toString().equals("")) return;
+        if (!clickedButton.getText().toString().isEmpty()) return;
 
         clickedButton.setText(playerXTurn ? "X" : "O");
         roundCount++;
@@ -76,15 +73,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Check rows & columns
         for (int i = 0; i < 3; i++) {
-            if (field[i][0].equals(field[i][1]) && field[i][0].equals(field[i][2]) && !field[i][0].equals(""))
+            if (field[i][0].equals(field[i][1]) && field[i][0].equals(field[i][2]) && !field[i][0].isEmpty())
                 return true;
-            if (field[0][i].equals(field[1][i]) && field[0][i].equals(field[2][i]) && !field[0][i].equals(""))
+            if (field[0][i].equals(field[1][i]) && field[0][i].equals(field[2][i]) && !field[0][i].isEmpty())
                 return true;
         }
-
         // Check diagonals
-        return (field[0][0].equals(field[1][1]) && field[0][0].equals(field[2][2]) && !field[0][0].equals("")) ||
-                (field[0][2].equals(field[1][1]) && field[0][2].equals(field[2][0]) && !field[0][2].equals(""));
+        return (field[0][0].equals(field[1][1]) && field[0][0].equals(field[2][2]) && !field[0][0].isEmpty()) ||
+                (field[0][2].equals(field[1][1]) && field[0][2].equals(field[2][0]) && !field[0][2].isEmpty());
     }
 
     private void updateScore() {
