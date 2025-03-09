@@ -8,4 +8,14 @@
     <string name="tic_tac_toe">Tic Tac Toe</string>
     <string name="reset_board">Reset Board</string>
     <string name="reset_score">Reset Score</string>
+    <string name="x_d_o_d">X: %d  O: %d</string>
+    <string name="btn_1">Btn 1</string>
+    <string name="btn_2">Btn 2</string>
+    <string name="btn_11">Btn 11</string>
+    <string name="btn_20">Btn 20</string>
+    <string name="btn_10">Btn 10</string>
+    <string name="btn_22">Btn 22</string>
+    <string name="btn_00">Btn 00</string>
+    <string name="btn_21">Btn 21</string>
+    <string name="btn_12">Btn 12</string>
 </resources>

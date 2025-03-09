@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp">
-
-    <!-- Score Board -->
-
+    android:padding="16dp"
+    tools:context=".MainActivity">
     <TextView
         android:id="@+id/gameTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/tic_tac_toe"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
     <TextView
         android:id="@+id/scoreBoard"
         android:layout_width="wrap_content"
@@ -25,77 +24,63 @@
         android:text="@string/player_x_0_player_o_0"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Tic Tac Toe Grid -->
+        android:layout_marginBottom="16dp" />
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="3"
-        android:rowCount="3">
-
-        <!-- 3x3 Grid Buttons -->
+        android:rowCount="3"
+        android:layout_marginBottom="16dp">
         <Button
             android:id="@+id/button00"
             style="@style/GridButton"
-            android:contentDescription="@string/tic_tac_toe_btn"
-            tools:ignore="DuplicateSpeakableTextCheck,RedundantDescriptionCheck" />
-
+            android:contentDescription="@string/btn_00" />
         <Button
             android:id="@+id/button01"
             style="@style/GridButton"
-            android:contentDescription="@string/tic_tac_toe_btn"
-            tools:ignore="DuplicateSpeakableTextCheck,RedundantDescriptionCheck" />
-
+            android:contentDescription="@string/btn_1" />
         <Button
             android:id="@+id/button02"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            android:contentDescription="@string/btn_2" />
         <Button
             android:id="@+id/button10"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            android:contentDescription="@string/btn_10" />
         <Button
             android:id="@+id/button11"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            android:contentDescription="@string/btn_11" />
         <Button
             android:id="@+id/button12"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            android:contentDescription="@string/btn_12" />
         <Button
             android:id="@+id/button20"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            android:contentDescription="@string/btn_20" />
         <Button
             android:id="@+id/button21"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            android:contentDescription="@string/btn_21" />
         <Button
             android:id="@+id/button22"
             style="@style/GridButton"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:contentDescription="@string/btn_22" />
     </GridLayout>
-
-    <!-- Reset Buttons -->
     <Button
         android:id="@+id/resetBoardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset_board"
-        android:layout_marginTop="16dp"/>
-
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
     <Button
         android:id="@+id/resetScoreButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset_score"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
 </LinearLayout>

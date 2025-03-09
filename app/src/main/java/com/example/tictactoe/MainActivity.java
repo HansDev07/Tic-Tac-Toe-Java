@@ -28,15 +28,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeGrid() {
+        buttons[0][0] = findViewById(R.id.button00);
+        buttons[0][1] = findViewById(R.id.button01);
+        buttons[0][2] = findViewById(R.id.button02);
+        buttons[1][0] = findViewById(R.id.button10);
+        buttons[1][1] = findViewById(R.id.button11);
+        buttons[1][2] = findViewById(R.id.button12);
+        buttons[2][0] = findViewById(R.id.button20);
+        buttons[2][1] = findViewById(R.id.button21);
+        buttons[2][2] = findViewById(R.id.button22);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                String buttonID = "button" + i + j;
-                int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
-                buttons[i][j] = findViewById(resID);
                 buttons[i][j].setOnClickListener(this::onButtonClick);
             }
         }
     }
+
 
     private void onButtonClick(View view) {
         Button clickedButton = (Button) view;
@@ -84,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateScore() {
-        scoreBoard.setText("X: " + scoreX + "  O: " + scoreO);
+        scoreBoard.setText(String.format(getString(R.string.x_d_o_d), scoreX, scoreO));
     }
 
     private void resetBoard() {
@@ -101,5 +108,6 @@ public class MainActivity extends AppCompatActivity {
         scoreX = 0;
         scoreO = 0;
         updateScore();
+        resetBoard();
     }
 }
